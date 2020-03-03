@@ -1,0 +1,22 @@
+{
+  "name": "minesweeper-api",
+  "version": "1.0.0",
+  "description": "Mineweeper-API creted for Deviget development application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzalorey/minesweeper-API.git"
+  },
+  "author": "Gonzalo M. Rey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzalorey/minesweeper-API/issues"
+  },
+  "homepage": "https://github.com/gonzalorey/minesweeper-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
