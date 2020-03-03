@@ -1,0 +1,49 @@
+openapi: "3.0.1"
+info:
+  title: "Sample Pet Store App"
+  description: "This is a sample server for a pet store."
+  termsOfService: "http://example.com/terms/"
+  contact:
+    name: "API Support"
+    url: "http://www.example.com/support"
+    email: "support@example.com"
+  license:
+    name: "Apache 2.0"
+    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+  version: "1.0.1"
+paths:
+  /games:
+    get:
+      description: "Get available games"
+      operationId: "getGames"
+      responses:
+        200:
+          description: "The available games were obtained"
+        400:
+          description: "Missing parameters"
+    post:
+      description: "Create a new game"
+      operationId: "createGame"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      parameters: 
+      - name: "rows"
+        in: "formData"
+        description: "Number of rows of the game"
+        required: false
+        type: "integer"
+      - name: "columns"
+        in: "formData"
+        description: "Number of columns of the game"
+        required: false
+        type: "integer"
+      - name: "mines"
+        in: "formData"
+        description: "Number of mines of the game"
+        required: false
+        type: "integer"
+      responses:
+        200:
+          description: "A new game was created"
+        400:
+          description: "Missing parameters"
