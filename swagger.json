@@ -14,5 +14,59 @@
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
     "version": "1.0.1"
+  },
+  "paths": {
+    "/games": {
+      "get": {
+        "description": "Get available games",
+        "operationId": "getGames",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "The available games were obtained",
+            "content": {}
+          },
+          "400": {
+            "description": "Missing parameters",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new game",
+        "operationId": "createGame",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { 
+                    "description": "Updated name of the pet",
+                    "type": "string"
+                  },
+                  "status": {
+                    "description": "Updated status of the pet",
+                    "type": "string"
+                  }
+                },
+                "required": ["status"] 
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A new game was created",
+            "content": {}
+          },
+          "400": {
+            "description": "Missing parameters",
+            "content": {}
+          }
+        }
+      }
+    }
   }
 }
