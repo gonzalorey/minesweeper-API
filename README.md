@@ -50,3 +50,7 @@ $> npm start
 
 - To access locally, go to http://localhost:8000. 
 - Documentation available at http://localhost:8000/api-docs, using **Swagger**.
+
+## Heroku instance
+
+An instance of this API was deployed in Heroku, go https://gonzalorey-minesweeper-api.herokuapp.com/ to use it. It may take a while for the first requests as the dynos load.

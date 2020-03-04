@@ -1,0 +1,20 @@
+<%= form_with scope: :game, url: games_path, local: true do |form| %>
+  <p>
+    <%= form.label :rows %><br>
+    <%= form.text_field :rows %>
+  </p>
+ 
+  <p>
+    <%= form.label :columns %><br>
+    <%= form.text_field :columns %>
+  </p>
+
+  <p>
+    <%= form.label :mines %><br>
+    <%= form.text_field :mines %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
