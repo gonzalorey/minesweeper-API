@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+---
+
+# Server Start
+
+It's a **Rails** app, started as follows:
+
+```bash
+$> rails server
+```
+
+To access locally, go to http://localhost:3000
