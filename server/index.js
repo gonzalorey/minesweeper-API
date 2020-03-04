@@ -5,6 +5,8 @@ const swaggerDocument = require('./swagger.json');
 
 const Game = require('./game.js');
 
+const PORT = process.env.PORT || 8000;
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/', (req, res) => {
@@ -17,6 +19,6 @@ app.post('/game', (req, res) => {
   res.send(game);
 })
 
-app.listen(8000, () => {
-  console.log('Example app listening on port 8000!');
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}!`);
 });
