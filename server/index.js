@@ -8,15 +8,15 @@ const Game = require('./game.js');
 
 const PORT = process.env.PORT || 8000;
 
-app.use(cors())
-
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.post('/game', (req, res) => {
+app.post('/game', cors(), (req, res) => {
   var game = Game.newGame();
 
   res.send(game);
