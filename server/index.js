@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
@@ -6,6 +7,8 @@ const swaggerDocument = require('./swagger.json');
 const Game = require('./game.js');
 
 const PORT = process.env.PORT || 8000;
+
+app.use(cors())
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

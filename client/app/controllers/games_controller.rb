@@ -8,7 +8,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    response = RestClient.post "#{MINESWEEPER_LOCAL}/game", {}
+    response = RestClient.post "#{MINESWEEPER_API_URL}/game", {}
 
     parsed_body = JSON.parse(response.body)
 
